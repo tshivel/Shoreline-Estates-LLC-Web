@@ -11,7 +11,9 @@ export async function handler(event, context) {
   try {
     const data = JSON.parse(event.body);
 
-    const response = await fetch("https://hooks.zapier.com/hooks/catch/21029478/27brseg/", {
+    console.log("🔥 Forwarding this data to Zapier:", data);
+
+    const response = await fetch("https://hooks.zapier.com/hooks/catch/21029478/273uyrd/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -19,14 +21,17 @@ export async function handler(event, context) {
       body: JSON.stringify(data)
     });
 
-    const responseBody = await response.text();
+    const responseText = await response.text();
+
+    console.log("✅ Zapier responded with:", response.status, responseText);
 
     return {
       statusCode: response.status,
-      body: responseBody
+      body: JSON.stringify({ message: "Forwarded to Zapier", response: responseText })
     };
 
   } catch (error) {
+    console.error("❌ Error in zapier-proxy:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message })
