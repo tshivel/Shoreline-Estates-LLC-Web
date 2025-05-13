@@ -295,6 +295,14 @@
   
 </div>
 
+<!-- Add this after Step 5 inside your <form id="multiStepForm"> -->
+<input type="hidden" id="inputTimeframe" name="timeframe" />
+<input type="hidden" id="inputValue" name="value" />
+<input type="hidden" id="inputBedrooms" name="bedrooms" />
+<input type="hidden" id="inputBathrooms" name="bathrooms" />
+<input type="hidden" id="inputIsOwner" name="isOwner" />
+
+
 
 <!-- THANK YOU PAGE -->
 <div id="thankYouModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center;">
@@ -337,7 +345,7 @@
 
   nextBtn.addEventListener("click", () => {
     if (currentStep === steps.length - 1) {
-      form.requestSubmit(); // triggers the submit event below
+      form.requestSubmit(); // triggers submit
     } else {
       currentStep++;
       updateSteps();
@@ -351,11 +359,18 @@
     }
   });
 
-  document.querySelectorAll(".options").forEach(group => {
+  // Update hidden inputs on button clicks
+  document.querySelectorAll(".options").forEach((group, index) => {
     group.addEventListener("click", e => {
       if (e.target.tagName === "BUTTON") {
         group.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
         e.target.classList.add("active");
+
+        const value = e.target.innerText;
+        if (index === 0) document.getElementById("inputTimeframe").value = value;
+        if (index === 1) document.getElementById("inputValue").value = value;
+        if (index === 2) document.getElementById("inputBedrooms").value = value;
+        if (index === 3) document.getElementById("inputBathrooms").value = value;
       }
     });
   });
@@ -365,6 +380,8 @@
       const group = button.parentElement.querySelectorAll('.owner-toggle');
       group.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
+
+      document.getElementById("inputIsOwner").value = button.innerText;
     });
   });
 
@@ -380,44 +397,41 @@
 
   window.addEventListener("load", initAutocomplete);
 
-  // ✅ Submit to Zapier Webhook on real form submit
   form.addEventListener("submit", function(e) {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault();
 
     const data = {
-      timeframe: document.querySelectorAll(".step")[0].querySelector(".options .active")?.innerText || "",
-      value: document.querySelectorAll(".step")[1].querySelector(".options .active")?.innerText || "",
-      bedrooms: document.querySelectorAll(".step")[2].querySelectorAll(".options")[0].querySelector(".active")?.innerText || "",
-      bathrooms: document.querySelectorAll(".step")[2].querySelectorAll(".options")[1].querySelector(".active")?.innerText || "",
+      timeframe: document.getElementById("inputTimeframe").value,
+      value: document.getElementById("inputValue").value,
+      bedrooms: document.getElementById("inputBedrooms").value,
+      bathrooms: document.getElementById("inputBathrooms").value,
       address: document.getElementById("addressInput").value,
       firstName: document.getElementById("firstName").value,
       lastName: document.getElementById("lastName").value,
       phone: document.getElementById("phone").value,
       email: document.getElementById("email").value,
-      isOwner: document.querySelector(".owner-toggle.active")?.innerText || ""
+      isOwner: document.getElementById("inputIsOwner").value
     };
 
     fetch("https://hooks.zapier.com/hooks/catch/21029478/27brseg/", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
     .then(response => {
-  if (response.ok) {
-    document.getElementById("thankYouModal").style.display = "flex";
-  } else {
-    alert("FORNITE");
-  }
-})
+      if (response.ok) {
+        document.getElementById("thankYouModal").style.display = "flex";
+      } else {
+        alert("There was an error submitting your form.");
+      }
+    })
     .catch(error => {
-  console.error("Fetch failed:", error);
-  alert("Fetch error: " + error.message); // will reveal what's wrong
-});
-
+      console.error("Fetch failed:", error);
+      alert("Fetch error: " + error.message);
+    });
   });
 </script>
+
 
 
 
