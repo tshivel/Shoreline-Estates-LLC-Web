@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Competitive Offer | Shoreline Estates</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('Images/ChatGPT Image May 13, 2025, 10_59_53 AM.png') no-repeat center center/cover;
+      min-height: 100vh;
+      padding-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      background-color: #0074cc;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .cta-buttons a {
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-fill {
+      background: #f8aa00;
+      color: black;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 800px;
+      background: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-header h1 {
+      font-size: 32px;
+      color: #2c3e50;
+    }
+
+    .form-header p {
+      color: #7f8c8d;
+      margin-top: 10px;
+    }
+
+    .question-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .options button {
+      padding: 12px 20px;
+      border: 2px solid #0074cc;
+      background: white;
+      color: #0074cc;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .options button.active,
+    .options button:hover {
+      background: #0074cc;
+      color: white;
+    }
+
+.owner-toggle.active,
+ .owner-toggle:hover{
+  background: #0074cc !important;
+  color: white !important;
+  border-color: #0074cc !important;
+}
+
+
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .navigation button {
+      padding: 12px 25px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shoreline Estates</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="howitworks.html">HOW IT WORKS</a>
+      <a href="offers.html">OFFERS</a>
+      <a href="investors.html">INVESTORS</a>
+    </nav>
+    <div class="cta-buttons">
+      <a href="tel:(219)689-2048" class="btn-outline">(219)689-2048</a>
+      <a href="offers.html" class="btn-fill">REQUEST AN OFFER</a>
+    </div>
+  </header>
+
+  <div class="form-wrapper">
+    <div class="form-container">
+      <form id="multiStepForm">
+        <!-- Step 1 -->
+        <div class="step active">
+          <div class="form-header">
+            <h1>Get a Competitive Offer in Minutes</h1>
+            <p>Just answer a few simple questions about the house you are looking to sell</p>
+          </div>
+          <div class="question-title">How Soon Are You Looking to Sell</div>
+          <div class="options">
+            <button type="button">As Soon As Possible</button>
+            <button type="button">1-3 Months</button>
+            <button type="button">3-6 Months</button>
+            <button type="button">6-12 Months</button>
+            <button type="button">12+ Months</button>
+            <button type="button">Not Sure</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="question-title">How Much Do You Think the Property is Worth</div>
+          <div class="options">
+            <button type="button">Less than $100K</button>
+            <button type="button">$100K to $200K</button>
+            <button type="button">$200K to $350K</button>
+            <button type="button">$300K to $400K</button>
+            <button type="button">$400K to $500K</button>
+            <button type="button">More than $500K</button>
+          </div>
+        </div>
+
+        <!-- Add this inside the <form id="multiStepForm"> after Step 2 -->
+
+<!-- Step 3 -->
+<div class="step">
+  <div class="question-title">Property Details</div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+    <!-- Bedrooms -->
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="text-align:center; margin-bottom: 15px;">How Many Bedrooms?</h3>
+      <div class="options">
+        <button type="button">1</button>
+        <button type="button">2</button>
+        <button type="button">3</button>
+        <button type="button">4+</button>
+        <button type="button">Not Sure</button>
+      </div>
+    </div>
+
+    <!-- Bathrooms -->
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="text-align:center; margin-bottom: 15px;">How Many Bathrooms?</h3>
+      <div class="options">
+        <button type="button">1</button>
+        <button type="button">2</button>
+        <button type="button">3</button>
+        <button type="button">4+</button>
+        <button type="button">Not Sure</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Step 4 -->
+<div class="step">
+  <div class="question-title">What Is the Address of the Property?</div>
+  <div style="display: flex; justify-content: center;">
+    <input
+      id="addressInput"
+      type="text"
+      placeholder="Enter your property address"
+      style="width: 100%; max-width: 500px; padding: 15px; font-size: 16px; border: 2px solid #0074cc; border-radius: 8px;"
+    />
+  </div>
+</div>
+
+
+<!-- Step 5 -->
+<div class="step">
+  <div class="form-header">
+    <h2>Enter your contact details</h2>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <label for="firstName" style="font-weight: bold; display: block; margin-bottom: 5px;">FIRST NAME</label>
+      <input type="text" id="firstName" name="firstName" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px;" />
+    </div>
+    <div style="flex: 1;">
+      <label for="lastName" style="font-weight: bold; display: block; margin-bottom: 5px;">LAST NAME</label>
+      <input type="text" id="lastName" name="lastName" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px;" />
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <label for="phone" style="font-weight: bold; display: block; margin-bottom: 5px;">PHONE NUMBER</label>
+      <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px;" />
+    </div>
+    <div style="flex: 1;">
+      <label for="email" style="font-weight: bold; display: block; margin-bottom: 5px;">EMAIL</label>
+      <input type="email" id="email" name="email" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px;" />
+    </div>
+  </div>
+
+  <div style="margin-top: 20px; margin-bottom: 30px;">
+    <label style="font-weight: bold; display: block; margin-bottom: 10px;">ARE YOU THE OWNER OF THE PROPERTY?</label>
+    <div style="display: flex; gap: 10px;">
+      <button type="button" class="owner-toggle" style="padding: 10px 25px; border-radius: 30px; border: 2px solid #0074cc; background: white; color: #0074cc; font-weight: bold;">NO</button>
+      <button type="button" class="owner-toggle" style="padding: 10px 25px; border-radius: 30px; border: 2px solid #0074cc; background: white; color: #0074cc; font-weight: bold;">YES</button>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<!-- THANK YOU PAGE -->
+<div id="thankYouModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center;">
+  <div style="background: white; padding: 40px; max-width: 500px; border-radius: 10px; text-align: center;">
+    <h2>Thank You!</h2>
+    <p>Thank you for providing the requested information.</p>
+    <p><strong>A local investor will get in touch with you</strong> to discuss the sale of your house and schedule a visit as soon as possible.</p>
+    <a href="offers.html" style="display: inline-block; margin-top: 20px; background-color: #0074cc; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Do you have another house to sell?</a>
+  </div>
+</div>
+        
+
+        <!-- Navigation -->
+        <div class="navigation">
+          <button type="button" id="prevBtn">Previous</button>
+          <button type="button" id="nextBtn">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+ <script>
+  const steps = document.querySelectorAll(".step");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const form = document.getElementById("multiStepForm");
+  let currentStep = 0;
+
+  function updateSteps() {
+    steps.forEach((step, i) => {
+      step.classList.toggle("active", i === currentStep);
+    });
+
+    if (currentStep === steps.length - 1) {
+      nextBtn.textContent = "Submit";
+    } else {
+      nextBtn.textContent = "Next";
+    }
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (currentStep === steps.length - 1) {
+      form.requestSubmit(); // triggers the submit event below
+    } else {
+      currentStep++;
+      updateSteps();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentStep > 0) {
+      currentStep--;
+      updateSteps();
+    }
+  });
+
+  document.querySelectorAll(".options").forEach(group => {
+    group.addEventListener("click", e => {
+      if (e.target.tagName === "BUTTON") {
+        group.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+        e.target.classList.add("active");
+      }
+    });
+  });
+
+  document.querySelectorAll('.owner-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const group = button.parentElement.querySelectorAll('.owner-toggle');
+      group.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+
+  function initAutocomplete() {
+    const input = document.getElementById("addressInput");
+    if (input) {
+      const autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ["address"],
+        componentRestrictions: { country: "us" }
+      });
+    }
+  }
+
+  window.addEventListener("load", initAutocomplete);
+
+  // ✅ Submit to Zapier Webhook on real form submit
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent page reload
+
+    const data = {
+      timeframe: document.querySelectorAll(".step")[0].querySelector(".options .active")?.innerText || "",
+      value: document.querySelectorAll(".step")[1].querySelector(".options .active")?.innerText || "",
+      bedrooms: document.querySelectorAll(".step")[2].querySelectorAll(".options")[0].querySelector(".active")?.innerText || "",
+      bathrooms: document.querySelectorAll(".step")[2].querySelectorAll(".options")[1].querySelector(".active")?.innerText || "",
+      address: document.getElementById("addressInput").value,
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
+      isOwner: document.querySelector(".owner-toggle.active")?.innerText || ""
+    };
+
+    fetch("https://hooks.zapier.com/hooks/catch/21029478/27brseg/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+  if (response.ok) {
+    document.getElementById("thankYouModal").style.display = "flex";
+  } else {
+    alert("FORNITE");
+  }
+})
+    .catch(error => {
+  console.error("Fetch failed:", error);
+  alert("Fetch error: " + error.message); // will reveal what's wrong
+});
+
+  });
+</script>
+
+
+
+<!-- Load Google Maps JavaScript API with Places Library -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVBgYkTIBzUONxGvOARNU463_M0QS4BKo&libraries=places&callback=initAutocomplete" async defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works | Shoreline Estates</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background: #0074cc;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-outline {
+      padding: 10px 20px;
+      border: 2px solid white;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-fill {
+      padding: 10px 20px;
+      background: #f8aa00;
+      color: black;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Page Intro */
+    .how-header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: #f4f9fd;
+    }
+
+    .how-header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .how-header p {
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Step Sections */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .step-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .step-text h3 {
+      color: #0074cc;
+      margin-bottom: 10px;
+    }
+
+    .step-img {
+      flex: 1;
+      min-width: 300px;
+      position: relative;
+    }
+
+    .step-img img {
+      width: 100%;
+      border-radius: 12px;
+      z-index: 1;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      background: #0074cc;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      border: 3px solid white;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .step-img {
+        order: -1;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Shoreline Estates</h1>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="howitworks.html">HOW IT WORKS</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="investors.html">INVESTORS</a>
+      </nav>
+      <div class="cta-buttons">
+        <a href="tel:(219)689-2048" class="btn-outline">(219)689-2048</a>
+        <a href="offers.html" class="btn-fill">REQUEST AN OFFER</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRO TEXT -->
+  <section class="how-header">
+    <h1>Sell Your House <span style="color: #0074cc;">in days</span>, Not Months</h1>
+    <p>A wonderful experience has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+  </section>
+
+  <!-- STEP 1 -->
+  <section class="section">
+    <div class="step-text">
+      <h3>Begin By Requesting An Offer</h3>
+      <p>Start by submitting your home’s details. A local professional from our team will reach out, discuss your goals, and give you an initial valuation. No commitments, just clarity.</p>
+    </div>
+    <div class="step-img">
+      <div class="step-number">1</div>
+      <img src="Images/step1.jpg" alt="Step 1 - Request Offer" />
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="section">
+    <div class="step-img">
+      <div class="step-number">2</div>
+      <img src="images/step2.jpg" alt="Step 2 - Schedule Appraisal" />
+    </div>
+    <div class="step-text">
+      <h3>Schedule an Appraisal</h3>
+      <p>Our certified home inspectors will evaluate the condition of your property. You don't need to worry about fixing anything — we buy homes as-is.</p>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="section">
+    <div class="step-text">
+      <h3>Receive a Final Offer</h3>
+      <p>Once we evaluate your property, we present you with our final offer. It’s transparent and fair. You decide if it’s right for you — no pressure.</p>
+    </div>
+    <div class="step-img">
+      <div class="step-number">3</div>
+      <img src="Images/step3.jpeg" alt="Step 3 - Final Offer" />
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class="section">
+    <div class="step-img">
+      <div class="step-number">4</div>
+      <img src="Images/step4.jpeg" alt="Step 4 - Choose Date" />
+    </div>
+    <div class="step-text">
+      <h3>Choose a Closing Date</h3>
+      <p>You pick the closing day. Whether you need to sell fast or need time to move out, we work on your timeline. No hidden fees. No surprises.</p>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class="section">
+    <div class="step-text">
+      <h3>You Get Paid</h3>
+      <p>Close the deal and collect your cash. It’s that simple. No waiting, no worrying — just a stress-free sale done on your terms.</p>
+    </div>
+    <div class="step-img">
+      <div class="step-number">5</div>
+      <img src="images/step5.jpg" alt="Step 5 - Get Paid" />
+    </div>
+  </section>
+
+  <section style="padding: 60px 20px; background: white; text-align: center;">
+    <h2 style="font-size: 28px; margin-bottom: 40px; color: #1a1a1a;">So, what are you waiting for?</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 40px; color: #666;">
+    Call (219)689-2048 to get your offer  <span style="color: #0074cc;">TODAY</span>.
+  </p>
+    </section>
+
+    <footer style="background: #0856a0; color: white; padding: 30px 20px 10px;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+    
+    <!-- Left Side: Company Name -->
+    <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+      Shoreline Estates
+    </div>
+
+    <!-- Right Side: Copyright -->
+    <div style="font-size: 14px; text-align: right;">
+      Copyright © 2025 | Shoreline Estates LLC
+    </div>
+  </div>
+
+  <hr style="border: 0; height: 1px; background: #2e7ec5; margin: 20px 20px;">
+
+  <!-- Center Motto -->
+  <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 10px 20px; font-size: 15px; line-height: 1.6;">
+    Our mission is to provide homeowners with a fast, fair, and honest selling experience — because your peace of mind matters.
+  </div>
+</footer>
+
+</body>
+</html>
