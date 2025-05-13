@@ -413,7 +413,7 @@
       isOwner: document.getElementById("inputIsOwner").value
     };
 
-    fetch("https://hooks.zapier.com/hooks/catch/21029478/27bjbyw/", {
+    fetch("/.netlify/functions/zapier-proxy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -425,10 +425,7 @@
         alert("There was an error submitting your form.");
       }
     })
-    .catch(error => {
-      console.error("Fetch failed:", error);
-      alert("Fetch error: " + error.message);
-    });
+   
   });
 </script>
 
