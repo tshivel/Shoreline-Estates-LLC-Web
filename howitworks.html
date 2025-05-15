@@ -39,15 +39,17 @@
     white-space: nowrap;
   }
 
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    background-color: #f8aa00;
-    padding: 10px;
-    border-radius: 6px;
-    margin-left: auto;
-  }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #f8aa00;
+  padding: 6px;
+  border-radius: 6px;
+  align-self: flex-end;
+  margin-top: -4px; /* <--- This pulls it up slightly */
+}
+
 
   .hamburger span {
     height: 3px;
