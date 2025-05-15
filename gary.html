@@ -168,7 +168,7 @@
     }
 
     .hero {
-      background: url("../Images/gary.jpg") no-repeat center center/cover;
+      background: url("Images/gary.jpg") no-repeat center center/cover;
       height: 450px;
       display: flex;
       justify-content: center;
@@ -178,6 +178,8 @@
       text-align: center;
       padding: 2rem;
     }
+
+
 
     .hero::before {
       content: "";
@@ -278,6 +280,27 @@
     .cta-section .cta:hover {
       background-color: #e0a800;
     }
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 18px; /* smaller font size for mobile */
+    max-width: 60%;  /* restrict how wide it can get */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  header {
+    flex-wrap: wrap; /* prevent logo and nav from colliding */
+    gap: 10px;
+  }
+
+  nav {
+    margin-left: auto; /* push hamburger to the right */
+  }
+}
+
+    
   </style>
 </head>
 <body>
@@ -292,14 +315,14 @@
         </div>
         <div class="nav-right">
           <ul class="nav-links">
-            <li><a href="../Website Pages/index.html">Home</a></li>
-            <li><a href="../Website Pages/howitworks.html">How It Works</a></li>
-            <li><a href="../Website Pages/offers.html">Offers</a></li>
-            <li><a href="../Website Pages/investors.html">Investors</a></li>
+            <li><a href="Website Pages/index.html">Home</a></li>
+            <li><a href="Website Pages/howitworks.html">How It Works</a></li>
+            <li><a href="Website Pages/offers.html">Offers</a></li>
+            <li><a href="Website Pages/investors.html">Investors</a></li>
           </ul>
           <div class="nav-cta">
             <a href="tel:+12196892048" class="phone">(219)689-2048</a>
-            <a href="/offers.html" class="request-offer">Request an Offer</a>
+            <a href="offers.html" class="request-offer">Request an Offer</a>
           </div>
         </div>
       </div>
