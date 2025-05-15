@@ -6,6 +6,10 @@
   <meta name="description" content="Sell your house fast in Gary, Indiana with Shoreline Estates. We offer quick cash offers, no commissions, and a stress-free closing process. Veteran-owned and local." />
   <title>Sell Your House Fast in Gary, Indiana | Shoreline Estates</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,11 +30,10 @@
     }
 
     .navbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      position: relative;
+      background-color: #0074cc;
       padding: 1rem 2rem;
+      width: 100%;
       z-index: 1000;
     }
 
@@ -41,28 +44,28 @@
       max-width: 1400px;
       margin: 0 auto;
       width: 100%;
+      position: relative;
     }
 
     .logo {
       font-size: 35px;
       font-weight: bold;
       color: white;
-      flex-shrink: 0;
+      white-space: nowrap;
     }
 
-.hamburger {
+   .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   background-color: #f8aa00;
   padding: 6px;
   border-radius: 6px;
-  align-self: flex-end;
-  margin-top: -4px; /* <--- This pulls it up slightly */
+  position: absolute;
+  top: .01rem;
+  right: .01rem;
+  z-index: 1001;
 }
-
-
-
 
 
     .hamburger span {
@@ -123,22 +126,33 @@
     }
 
     @media (max-width: 768px) {
+      .logo {
+        font-size: 22px;
+        max-width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
       .hamburger {
         display: flex;
       }
 
       .nav-right {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #004aad;
-        padding: 1rem 2rem;
-        gap: 1rem;
-      }
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #004aad;
+  padding: 1rem 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
 
       .nav-right.active {
         display: flex;
@@ -179,8 +193,6 @@
       text-align: center;
       padding: 2rem;
     }
-
-
 
     .hero::before {
       content: "";
@@ -281,27 +293,6 @@
     .cta-section .cta:hover {
       background-color: #e0a800;
     }
-
-@media (max-width: 768px) {
-  .logo {
-    font-size: 18px; /* smaller font size for mobile */
-    max-width: 60%;  /* restrict how wide it can get */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  header {
-    flex-wrap: wrap; /* prevent logo and nav from colliding */
-    gap: 10px;
-  }
-
-  nav {
-    margin-left: auto; /* push hamburger to the right */
-  }
-}
-
-    
   </style>
 </head>
 <body>
