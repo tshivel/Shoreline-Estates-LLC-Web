@@ -169,6 +169,26 @@
       right: 20px;
     }
 
+    @media (max-width: 768px) {
+  .logo {
+    font-size: 18px; /* smaller font size for mobile */
+    max-width: 60%;  /* restrict how wide it can get */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  header {
+    flex-wrap: wrap; /* prevent logo and nav from colliding */
+    gap: 10px;
+  }
+
+  nav {
+    margin-left: auto; /* push hamburger to the right */
+  }
+}
+
+
     header {
       flex-direction: column;
       align-items: flex-start;
