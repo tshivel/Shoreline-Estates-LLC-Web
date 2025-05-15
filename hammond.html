@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sell your house fast in Hammond, Indiana with Shoreline Estates. We offer quick cash offers, no commissions, and a stress-free closing process. Veteran-owned and local." />
+  <title>Sell Your House Fast in Hammond, Indiana | Shoreline Estates</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar {
+      position: relative;
+      background-color: #0074cc;
+      padding: 1rem 2rem;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+      color: white;
+      white-space: nowrap;
+    }
+
+   .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #f8aa00;
+  padding: 6px;
+  border-radius: 6px;
+  position: absolute;
+  top: .01rem;
+  right: .01rem;
+  z-index: 1001;
+}
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffdf2b;
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .nav-cta .phone {
+      color: white;
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .nav-cta .request-offer {
+      background-color: #ffc107;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-cta .request-offer:hover {
+      background-color: #e0a800;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 22px;
+        max-width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-right {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #004aad;
+  padding: 1rem 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+      .nav-right.active {
+        display: flex;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links a {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      .nav-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        width: 100%;
+      }
+
+      .nav-cta .request-offer,
+      .nav-cta .phone {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .hero {
+      background: url("Images/hammond.jpg") no-repeat center center/cover;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta {
+      background-color: #ffc107;
+      color: black;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #e0a800;
+    }
+
+    .content {
+      background-color: #ffffff;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .content section {
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: #004aad;
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .content p {
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    .content ul {
+      padding-left: 1.2rem;
+      margin-top: 0.75rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding-top: 1rem;
+      border: none;
+    }
+
+    .cta-section .cta {
+      background-color: #ffc107;
+      color: black;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 0.75rem 1.75rem;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-section .cta:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo">Shoreline Estates</a>
+        <div class="hamburger" onclick="document.querySelector('.nav-right').classList.toggle('active')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="howitworks.html">How It Works</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="investors.html">Investors</a></li>
+          </ul>
+          <div class="nav-cta">
+            <a href="tel:+12196892048" class="phone">(219)689-2048</a>
+            <a href="offers.html" class="request-offer">Request an Offer</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Sell Your House Fast in Hammond, IN</h1>
+      <p>We buy houses in any condition. No fees, no commissions, and no repairs needed.</p>
+      <a href="offers.html" class="cta">GET MY CASH OFFER</a>
+    </div>
+  </section>
+
+  <main class="content">
+    <section class="intro">
+      <h2>Need to Sell Your House Fast in Hammond?</h2>
+      <p>Shoreline Estates is your local, veteran-owned real estate company helping homeowners in Hammond sell fast and hassle-free. Whether you're facing foreclosure, inherited an unwanted home, or just need to move quickly, we make selling simple. Get a fair, cash offer and close on your timeline.</p>
+    </section>
+
+    <section class="why-us">
+      <h2>Why Choose Shoreline Estates?</h2>
+      <ul>
+        <li>✔ We pay cash for homes in Hammond</li>
+        <li>✔ Close in as little as 10 days</li>
+        <li>✔ No repairs, showings, or agent fees</li>
+        <li>✔ We’re local, honest, and veteran-owned</li>
+      </ul>
+    </section>
+
+  
+
+    <section class="cta-section">
+      <h2>Get Your Free Cash Offer Today</h2>
+      <p>Ready to move on from your Hammond property? Click below to fill out our quick form and receive a no-obligation offer within 24 hours.</p>
+      <a href="offers.html" class="cta">GET MY CASH OFFER</a>
+    </section>
+  </main>
+
+  <footer style="background: #0856a0; color: white; padding: 30px 20px 10px;">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+      <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+        Shoreline Estates
+      </div>
+      <div style="font-size: 14px; text-align: right;">
+        Copyright © 2025 | Shoreline Estates LLC
+      </div>
+    </div>
+    <hr style="border: 0; height: 1px; background: #2e7ec5; margin: 20px 20px;">
+    <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 10px 20px; font-size: 15px; line-height: 1.6;">
+      Our mission is to provide homeowners with a fast, fair, and honest selling experience — because your peace of mind matters.
+    </div>
+  </footer>
+  
+</body>
+</html>
+
+
