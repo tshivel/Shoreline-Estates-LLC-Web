@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoreline Estates | Investors</title>
+ <style>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f9fd;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background-color: #0074cc;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Use fixed if you want it to always stay on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #f8aa00;
+  padding: 6px;
+  border-radius: 6px;
+  align-self: center;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* NAVIGATION & CTA */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cta-buttons a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-fill {
+  background: #f8aa00;
+  color: black;
+}
+
+/* COMING SOON SECTION (OPTIONAL IF USED) */
+.coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 80vh;
+}
+
+.coming-soon h2 {
+  font-size: 36px;
+  color: #0074cc;
+  margin-bottom: 20px;
+}
+
+.coming-soon p {
+  font-size: 18px;
+  max-width: 600px;
+  color: #444;
+}
+
+/* FOOTER STYLES (FOR REFERENCE) */
+footer {
+  background: #0856a0;
+  color: white;
+  padding: 30px 20px 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .header-right {
+    display: none;
+    flex-direction: column;
+    background-color: #0074cc;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    margin-top: 60px;
+  }
+
+  .header-right.active {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+    color: white;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cta-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .coming-soon h2 {
+    font-size: 28px;
+  }
+}
+
+  
+</style>
+
+</head>
+<body>
+
+ <header>
+  <div class="logo">Shoreline Estates</div>
+  <div class="hamburger" onclick="document.querySelector('.header-right').classList.toggle('active')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="header-right">
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="howitworks.html">HOW IT WORKS</a>
+      <a href="offers.html">OFFERS</a>
+      <a href="investors.html">INVESTORS</a>
+    </nav>
+    <div class="cta-buttons">
+      <a href="tel:(219)689-2048" class="btn-outline">(219)689-2048</a>
+      <a href="offers.html" class="btn-fill">REQUEST AN OFFER</a>
+    </div>
+  </div>
+</header>
+
+
+
+  <section class="coming-soon">
+    <h2>Investor Portal Coming Soon</h2>
+    <p>
+      We’re building something exciting for our investor partners. Whether you're interested in fix-and-flips, passive income, or long-term growth — Shoreline Estates is your trusted local ally. Check back soon!
+    </p>
+  </section>
+
+  <footer style="background: #0856a0; color: white; padding: 30px 20px 10px;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+    
+    <!-- Left Side: Company Name -->
+    <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+      Shoreline Estates
+    </div>
+
+    <!-- Right Side: Copyright -->
+    <div style="font-size: 14px; text-align: right;">
+      Copyright © 2025 | Shoreline Estates LLC
+    </div>
+  </div>
+
+  <hr style="border: 0; height: 1px; background: #2e7ec5; margin: 20px 20px;">
+
+  <!-- Center Motto -->
+  <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 10px 20px; font-size: 15px; line-height: 1.6;">
+    Our mission is to provide homeowners with a fast, fair, and honest selling experience — because your peace of mind matters.
+  </div>
+</footer>
+
+
+
+</script>
+
+
+</body>
+</html>

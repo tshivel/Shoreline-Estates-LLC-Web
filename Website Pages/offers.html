@@ -6,165 +6,252 @@
   <title>Get a Competitive Offer | Shoreline Estates</title>
   <style>
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: url('Images/ChatGPT Image May 13, 2025, 10_59_53 AM.png') no-repeat center center/cover;
-      min-height: 100vh;
-      padding-top: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: url('Images/ChatGPT Image May 13, 2025, 10_59_53 AM.png') no-repeat center center/cover;
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    header {
-      background-color: #0074cc;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-    }
+/* HEADER */
+header {
+  background-color: #0074cc;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
 
-    header h1 {
-      font-size: 24px;
-      font-weight: bold;
-    }
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
 
-    nav {
-      display: flex;
-      gap: 30px;
-    }
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #f8aa00;
+  padding: 6px;
+  border-radius: 3px;
+  margin-left: auto;
+  align-self: center; /* NEW: vertically center it */
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
 
-    .cta-buttons {
-      display: flex;
-      gap: 10px;
-    }
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
 
-    .cta-buttons a {
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
+/* Nav and CTA buttons */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 
-    .btn-outline {
-      border: 2px solid white;
-      color: white;
-    }
+nav {
+  display: flex;
+  gap: 30px;
+}
 
-    .btn-fill {
-      background: #f8aa00;
-      color: black;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .form-wrapper {
-      width: 100%;
-      max-width: 800px;
-      background: white;
-      border-radius: 10px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
+.cta-buttons {
+  display: flex;
+  gap: 10px;
+}
 
-    .step {
-      display: none;
-    }
+.cta-buttons a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
 
-    .step.active {
-      display: block;
-    }
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+}
 
-    .form-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.btn-fill {
+  background: #f8aa00;
+  color: black;
+}
 
-    .form-header h1 {
-      font-size: 32px;
-      color: #2c3e50;
-    }
+/* FORM WRAPPER */
+.form-wrapper {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-    .form-header p {
-      color: #7f8c8d;
-      margin-top: 10px;
-    }
+.step {
+  display: none;
+}
 
-    .question-title {
-      font-size: 22px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+.step.active {
+  display: block;
+}
 
-    .options {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .options button {
-      padding: 12px 20px;
-      border: 2px solid #0074cc;
-      background: white;
-      color: #0074cc;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s ease;
-    }
+.form-header h1 {
+  font-size: 32px;
+  color: #2c3e50;
+}
 
-    .options button.active,
-    .options button:hover {
-      background: #0074cc;
-      color: white;
-    }
+.form-header p {
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+.question-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.options button {
+  padding: 12px 20px;
+  border: 2px solid #0074cc;
+  background: white;
+  color: #0074cc;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.options button.active,
+.options button:hover {
+  background: #0074cc;
+  color: white;
+}
 
 .owner-toggle.active,
- .owner-toggle:hover{
+.owner-toggle:hover {
   background: #0074cc !important;
   color: white !important;
   border-color: #0074cc !important;
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
 
+.navigation button {
+  padding: 12px 25px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-    }
+/* Responsive Header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .navigation button {
-      padding: 12px 25px;
-      background: #2c3e50;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .header-right {
+    display: none;
+    flex-direction: column;
+    background-color: #0074cc;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    margin-top: 60px;
+  }
+
+  .header-right.active {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+    color: white;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cta-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Shoreline Estates</h1>
+<header>
+  <div class="logo">Shoreline Estates</div>
+  <div class="hamburger" onclick="document.querySelector('.header-right').classList.toggle('active')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="header-right">
     <nav>
       <a href="index.html">HOME</a>
       <a href="howitworks.html">HOW IT WORKS</a>
@@ -175,7 +262,9 @@
       <a href="tel:(219)689-2048" class="btn-outline">(219)689-2048</a>
       <a href="offers.html" class="btn-fill">REQUEST AN OFFER</a>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <div class="form-wrapper">
     <div class="form-container">
