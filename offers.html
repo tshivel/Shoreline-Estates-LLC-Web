@@ -591,6 +591,15 @@ nav a {
     })
    
   });
+   // Sync all checkboxes with the name "consent"
+document.querySelectorAll('input[name="consent"]').forEach(checkbox => {
+  checkbox.addEventListener('change', function() {
+    const isChecked = this.checked;
+    document.querySelectorAll('input[name="consent"]').forEach(box => {
+      box.checked = isChecked;
+    });
+  });
+});
 </script>
 
 
